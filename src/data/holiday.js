@@ -8,7 +8,7 @@ export const business = {
   whatsapp: '573042789819',
   displayPhone: '+57 304 278 9819',
   area: 'Suba, Bogotá',
-  address: null,
+  address: 'Cra. 136a #143 59, Bogotá',
   hours: null,
   mapUrl: null,
   socialLinks: [],
@@ -17,15 +17,18 @@ export const messages = {
   general: 'Hola, Panadería Holiday. Me gustaría obtener más información sobre sus servicios.',
   delivery: 'Hola, Panadería Holiday. Quisiera consultar si tienen servicio de domicilios para mi ubicación.',
   location: 'Hola, Panadería Holiday. ¿Me pueden compartir su ubicación exacta y sus horarios de atención?',
+  menu: 'Hola, Panadería Holiday. Quisiera consultar su menú y precios.',
 };
 export function whatsappUrl(context = 'general') {
   return `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(messages[context] || messages.general)}`;
 }
 export const navigation = [
   ['Inicio', 'inicio'], ['Nosotros', 'nosotros'], ['Nuestra esencia', 'esencia'],
-  ['Galería', 'galeria'], ['Experiencias', 'experiencias'], ['Contacto', 'contacto'],
+  ['Menú', 'menu'], ['Galería', 'galeria'], ['Experiencias', 'experiencias'], ['Contacto', 'contacto'],
 ];
 export const images = { hero, bread, coffee, lunch };
+// Reemplaza esta URL por el enlace real al PDF con el menú completo
+export const menuPdf = '/menu.pdf';
 export const experiences = [
   { number: '01', title: 'Panadería y pastelería', text: 'El placer de una pausa dulce y ese aroma a pan que invita a quedarse.', image: bread, alt: 'Imagen de referencia de panes y croissants sobre una mesa' },
   { number: '02', title: 'Café y buenos momentos', text: 'Una taza de café, una buena conversación y tiempo para disfrutar.', image: coffee, alt: 'Imagen de referencia de café y una porción de torta' },
